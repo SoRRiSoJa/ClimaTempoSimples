@@ -8,3 +8,4 @@ Para criação e preenchimento da base de testes utilizar os scripts SQL disponi
 3 - ClimaTempoSimplesFillData.SQL
 
 ![Screenshot](ClimaTempoSimples_1.PNG)
+![Screenshot](EstatisticasProj.PNG)
