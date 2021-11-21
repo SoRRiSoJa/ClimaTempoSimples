@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@Styles.Render("~/Content/Quadros.css");
+
+@section scripts{
+    <script src="~/Scripts/ScrPrevisao.js"></script>
+}
+
+<div class="jumbotron">
+    <h1>Clima tempo simples</h1>
+</div>
+<section>
+    <div style="display: flex; width: 100%; justify-content: left;">
+        <div class="quadrao">
+            <div class="quadrinhoInterno">
+                <div style="width: 100%; text-align:left; color: white;">Cidades mais quentes hoje</div>
+            </div>
+            <div>
+                @foreach (var cidade in ViewBag.CidadesMaisQuentes)
+                {
+                    <div style="width: 100%; text-align:left">@(cidade.Cidade.Nome)     Min:@(cidade.TemperaturaMinima) 	Max:@(cidade.TemperaturaMaxima)</div>
+                }
+            </div>
+        </div>
+        <div class="quadrao">
+            <div class="quadrinhoInterno">
+                <div style="width: 100%; text-align:left; color: white;">Cidades mais frias hoje</div>
+            </div>
+            <div>
+                @foreach (var cidade in ViewBag.CidadesMaisFrias)
+                {
+                    <div style="width: 100%; text-align:left">@(cidade.Cidade.Nome)     Min:@(cidade.TemperaturaMinima) 	Max:@(cidade.TemperaturaMaxima)</div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="cidade_id">
+    <div style="width: 100%; text-align:right"> @Html.DropDownList("Cidades")</div>
+    <div id="cidadeEscolhida">
+
+    </div>
+</div>
+<!--Quadrinhos de previsão do tempo-->
+<section>
+    <div id="info" style="display: flex; width: 80%; justify-content: center;">
+
+
+    </div>
+</section>
+

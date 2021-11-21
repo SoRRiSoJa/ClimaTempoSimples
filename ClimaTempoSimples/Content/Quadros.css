@@ -1,0 +1,21 @@
+﻿.quadrinho {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #337cbc;
+    border-radius: 5px;
+    width: 15%;
+    margin: 5px;
+}
+.quadrao {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #337cbc;
+    border-radius: 5px;
+    width: 55%;
+    margin: 10px;
+}
+
+.quadrinhoInterno {
+    width: 100%;
+    background-color: #337cbc;
+}
